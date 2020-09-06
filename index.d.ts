@@ -3321,6 +3321,8 @@ interface EventMpPool {
 	addDataHandler(keyName: string, callback: (...args: any[]) => void): void;
 	add(eventName: RageEnums.EventKey | string, callback: (...args: any[]) => void): void;
 	add(events: ({ [name: string]: (...args: any[]) => void; })): void;
+	addProc(procName: string, callback: (...args: any[]) => any): void
+	addProc(procs: ({ [name: string]: (...args: any[]) => any; })): void;
 
 	call(eventName: string, ...args: any[]): void;
 	callRemoteUnreliable(eventName: string, ...args: any[]): void;
